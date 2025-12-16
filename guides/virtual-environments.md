@@ -17,10 +17,22 @@ Virtual environments solve this by creating isolated spaces for each project, wi
 
 ### Installation
 
-#### macOS / Linux
+#### macOS
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+#### Linux / WSL
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+After installation, restart your terminal or run:
+
+```bash
+source $HOME/.local/bin/env
 ```
 
 #### Windows (PowerShell)
