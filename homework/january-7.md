@@ -1,6 +1,6 @@
 # Homework: January 7th
 
-After the webinar, complete the following tasks to practice using the terminal, Git, and GitHub.
+Complete this homework **before** the January 7th webinar to practice using the terminal, Git, and GitHub.
 
 ## Minimal Homework
 
