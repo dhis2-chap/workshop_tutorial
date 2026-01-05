@@ -86,7 +86,19 @@ Open your terminal, and you should be good to go to continue to the next section
 
 </details>
 
-### List of basic Commands (works on Mac, Linus and WSL)
+## IDE (Integrated Development Environment)
+
+This tutorial highly recommend to use an IDE. Recommended: Visual Studio Code — download and install from https://code.visualstudio.com/.
+
+Quick setup
+
+- Download the installer for your OS from the link above and run it.
+- After installing, open your project folder in Visual Studio Code (File → Open Folder) or from the terminal run:
+  ```
+  code .
+  ```
+
+## List of basic Commands (works on Mac, Linus and WSL)
 
 | Command           | Description                                  |
 | ----------------- | -------------------------------------------- |
