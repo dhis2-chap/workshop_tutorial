@@ -88,15 +88,11 @@ Open your terminal, and you should be good to go to continue to the next section
 
 ## IDE (Integrated Development Environment)
 
-This tutorial highly recommend to use an IDE. Recommended: Visual Studio Code — download and install from https://code.visualstudio.com/.
+Use an IDE — recommended: Visual Studio Code (https://code.visualstudio.com/). It gives an editor and integrated terminal. After installing, open your project folder (File → Open Folder) or run:
 
-Quick setup
-
-- Download the installer for your OS from the link above and run it.
-- After installing, open your project folder in Visual Studio Code (File → Open Folder) or from the terminal run:
-  ```
-  code .
-  ```
+```bash
+code .
+```
 
 ## List of basic Commands (works on Mac, Linus and WSL)
 
