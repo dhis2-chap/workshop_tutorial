@@ -66,32 +66,103 @@ Git is a **command-line tool** that works with GitHub. While GitHub is the websi
 ### Installation
 
 **macOS:**
+<details>
+<summary>Show command</summary>
+
 ```bash
 brew install git
 ```
 
+</details>
+
 **Linux (Ubuntu/Debian) / Windows (WSL):**
+<details>
+<summary>Show command</summary>
+
 ```bash
 sudo apt update
 sudo apt install git
 ```
 
+</details>
+
 ### Initial Setup
 
 Configure your identity (this labels your changes):
+<details>
+<summary>Show command</summary>
+
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 ```
 
+</details>
+
+### GitHub CLI (Authentication)
+
+To push and pull code without entering passwords, install the GitHub CLI and authenticate:
+
+**Installation:**
+
+macOS:
+<details>
+<summary>Show command</summary>
+
+```bash
+brew install gh
+```
+
+</details>
+
+Linux (Ubuntu/Debian) / Windows (WSL):
+<details>
+<summary>Show command</summary>
+
+```bash
+(type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) \
+&& sudo mkdir -p -m 755 /etc/apt/keyrings \
+&& out=$(mktemp) && wget -nv -O$out https://cli.github.com/packages/githubcli-archive-keyring.gpg \
+&& cat $out | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null \
+&& sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg \
+&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+&& sudo apt update \
+&& sudo apt install gh -y
+```
+
+</details>
+
+**Authenticate:**
+<details>
+<summary>Show command</summary>
+
+```bash
+gh auth login
+```
+
+</details>
+
+When prompted:
+1. Select **GitHub.com**
+2. Select **HTTPS**
+3. Select **Yes** to authenticate with GitHub credentials
+4. Select **Login with a web browser** and follow the prompts
+
+Once authenticated, Git will use your GitHub credentials automatically.
+
 ### Cloning a Repository
 
 "Cloning" means downloading a repository to your computer:
+
+<details>
+<summary>Show command</summary>
 
 ```bash
 git clone https://github.com/YOUR-USERNAME/repo-name.git
 cd repo-name
 ```
+
+</details>
 
 This creates a folder with all the files from the repository.
 
@@ -100,30 +171,53 @@ This creates a folder with all the files from the repository.
 After cloning, you can edit files normally with any text editor. When you're ready to save your changes, you'll use a two-step process: **staging** and **committing**.
 
 **1. Check what's changed:**
+<details>
+<summary>Show command</summary>
+
 ```bash
 git status
 ```
+
+</details>
+
 This shows which files you've modified, added, or deleted.
 
 **2. Stage your changes:**
+<details>
+<summary>Show command</summary>
+
 ```bash
 git add .
 ```
+
+</details>
+
 Staging selects which changes you want to include in your next save. The `.` means "all changes", but you can also stage specific files with `git add filename.py`. Think of it as putting items in a box before shipping.
 
 **3. Commit your changes:**
+<details>
+<summary>Show command</summary>
+
 ```bash
 git commit -m "Describe what you changed"
 ```
+
+</details>
+
 Committing saves a snapshot of your staged changes with a message describing what you did. This creates a checkpoint you can return to later. The message helps you (and others) understand what changed and why.
 
 ### Pushing to GitHub
 
 After committing, your changes are saved locally on your computer. To share them on GitHub, you need to **push**:
 
+<details>
+<summary>Show command</summary>
+
 ```bash
 git push
 ```
+
+</details>
 
 This uploads your commits to GitHub, making them visible to others and backing them up online.
 
@@ -131,9 +225,14 @@ This uploads your commits to GitHub, making them visible to others and backing t
 
 If the repository has changed on GitHub (e.g., you made changes on another computer, or a collaborator pushed updates), you need to **pull** those changes to your local copy:
 
+<details>
+<summary>Show command</summary>
+
 ```bash
 git pull
 ```
+
+</details>
 
 This downloads any new commits from GitHub and updates your local files.
 
@@ -149,7 +248,7 @@ Go to [github.com](https://github.com) and sign up (if you haven't already).
 
 **2. Browse a repository**
 
-Go to https://github.com/knutdrand/chap-python-sdk
+Go to [github.com/knutdrand/chap-python-sdk](https://github.com/knutdrand/chap-python-sdk)
 
 **Verify**: You can see the list of files and the README at the bottom
 
@@ -163,52 +262,139 @@ Go to https://github.com/knutdrand/chap-python-sdk
 ### Part 2: Git (Command Line)
 
 **4. Check Git is installed**
+<details>
+<summary>Show command</summary>
+
 ```bash
 git --version
 ```
+
+</details>
+
 **Verify**: You should see a version number like `git version 2.x.x`
 
 **5. Configure your identity**
+<details>
+<summary>Show command</summary>
+
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 ```
+
+</details>
+
 **Verify**: Run `git config --list` and confirm your name and email appear
 
-**6. Clone your fork**
+**6. Install GitHub CLI and authenticate**
+
+Install GitHub CLI:
+
+macOS:
+<details>
+<summary>Show command</summary>
+
+```bash
+brew install gh
+```
+
+</details>
+
+Linux (Ubuntu/Debian) / Windows (WSL):
+<details>
+<summary>Show command</summary>
+
+```bash
+(type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) \
+&& sudo mkdir -p -m 755 /etc/apt/keyrings \
+&& out=$(mktemp) && wget -nv -O$out https://cli.github.com/packages/githubcli-archive-keyring.gpg \
+&& cat $out | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null \
+&& sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg \
+&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+&& sudo apt update \
+&& sudo apt install gh -y
+```
+
+</details>
+
+Then authenticate:
+<details>
+<summary>Show command</summary>
+
+```bash
+gh auth login
+```
+
+</details>
+
+Select: **GitHub.com** → **HTTPS** → **Yes** → **Login with a web browser**
+
+**Verify**: Run `gh auth status` and confirm you're logged in
+
+**7. Clone your fork**
+<details>
+<summary>Show command</summary>
+
 ```bash
 git clone https://github.com/YOUR-USERNAME/chap-python-sdk.git
 cd chap-python-sdk
 ```
+
+</details>
+
 **Verify**: Run `ls` and you should see the repository files
 
-**7. Check the remote**
+**8. Check the remote**
+<details>
+<summary>Show command</summary>
+
 ```bash
 git remote -v
 ```
+
+</details>
+
 **Verify**: You should see `origin` pointing to your GitHub fork
 
-**8. Make a change**
+**9. Make a change**
 
 Open the README.md file in a text editor and add a line (e.g., your name or a note). Save the file.
 
-**9. Check the status**
+**10. Check the status**
+<details>
+<summary>Show command</summary>
+
 ```bash
 git status
 ```
+
+</details>
+
 **Verify**: You should see `README.md` listed as modified (in red)
 
-**10. Stage, commit, and push**
+**11. Stage, commit, and push**
+<details>
+<summary>Show command</summary>
+
 ```bash
 git add README.md
 git status
 ```
+
+</details>
+
 **Verify**: `README.md` should now be listed as staged (in green)
+
+<details>
+<summary>Show command</summary>
 
 ```bash
 git commit -m "Add my name to README"
 git push
 ```
+
+</details>
+
 **Verify**: Visit your fork on GitHub and you should see your change in the README
 
 If all verifications passed, you're ready for the next guide: [Pull Requests](pull-requests.md)
