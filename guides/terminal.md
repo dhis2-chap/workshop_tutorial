@@ -1,60 +1,35 @@
 # Working on the Terminal
 
-## Introduction
+## Getting Started
 
 The terminal (also called command line or shell) is a text-based interface for interacting with your computer. Learning basic terminal skills is essential for working with Git, running scripts, and using development tools.
-
-## Getting Started
 
 <details>
   <summary><strong>Windows</strong></summary>
 
-  <p>
-    To use Chat CLI later on a Windows machine, install the Windows Subsystem for Linux (WSL).
-  </p>
+To use Chat CLI later on a Windows machine, install the Windows Subsystem for Linux (WSL).
 
-  <p>
-    Windows Subsystem for Linux (WSL) allows you to run a Linux environment on your Windows machine,
-    without the need for a separate virtual machine or dual booting.
-    Read more about WSL
-    <a href="https://learn.microsoft.com/en-us/windows/wsl/about">here</a>.
-  </p>
+Windows Subsystem for Linux (WSL) allows you to run a Linux environment on your Windows machine without the need for a separate virtual machine or dual booting.  
+Read more about WSL [here](https://learn.microsoft.com/en-us/windows/wsl/about).
 
-  <ol>
-    <li>
-      Start <strong>PowerShell</strong> by searching for it in the Start Menu in Windows<br/>
-      <img src="image.png" alt="PowerShell Start Menu" width="400" />
-    </li>
+1. Start **PowerShell** by searching for it in the Start Menu in Windows  
+   ![PowerShell Start Menu](image.png)
 
-    <li>
-      Within the shell, execute:
-      <pre><code class="language-bash">wsl --install</code></pre>
-    </li>
-
-    <li>Restart your computer.</li>
-
-    <li>
-      Search for and open <strong>Ubuntu</strong> from the Start menu.
-      You now have access to the Ubuntu command line, which is a Linux distribution,
-      allowing you to execute Linux commands.
-    </li>
-
-  </ol>
+2. Within the shell, execute:
+   ```bash
+   wsl --install
+   ```
 
 </details>
 
 <details>
   <summary><strong>Mac / Linux</strong></summary>
 
-  <p>
-    Open the <strong>Terminal</strong> application.
-  </p>
+Open the <strong>Terminal</strong> application.
 
-  <p>
-    On macOS, you can find it in
-    <strong>Applications → Utilities → Terminal</strong>,
-    or search for “Terminal” using Spotlight.
-  </p>
+On macOS, you can find it in
+<strong>Applications → Utilities → Terminal</strong>,
+or search for “Terminal” using Spotlight.
 
 </details>
 
