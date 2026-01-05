@@ -3,6 +3,7 @@
 ## Why?
 
 Git solves critical problems in software development:
+
 - **Track changes**: See what changed, when, and why
 - **Undo mistakes**: Revert to any previous version of your code
 - **Collaborate**: Multiple people can work on the same project without overwriting each other's work
@@ -15,6 +16,7 @@ Without version control, you end up with folders like `model_final_v2_FIXED_real
 Git is a **version control system** — software that tracks changes to your files over time.
 
 Key concepts:
+
 - **Repository (repo)**: A folder tracked by Git, containing your files and their history
 - **Commit**: A saved snapshot of your changes, like a checkpoint you can return to
 - **Branch**: A parallel version of your code (for experimenting without affecting the main code)
@@ -25,11 +27,23 @@ Key concepts:
 ### Installation
 
 **macOS:**
+
+Homebrew is a package manager for macOS that makes it easy to install and manage software. The instructions below are based on Homebrew being installed.
+
+You can install it by running:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Then install Git with:
+
 ```bash
 brew install git
 ```
 
 **Linux (Ubuntu/Debian) / Windows (WSL):**
+
 ```bash
 sudo apt update
 sudo apt install git
@@ -38,6 +52,7 @@ sudo apt install git
 ### Initial Setup
 
 Configure your identity (used in commits):
+
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
@@ -46,37 +61,44 @@ git config --global user.email "your.email@example.com"
 ### Essential Commands
 
 **Clone an existing repository:**
+
 ```bash
 git clone <url>
 ```
 
 **Check what's changed:**
+
 ```bash
 git status
 ```
 
 **Stage files for commit:**
+
 ```bash
 git add <file>       # Stage one file
 git add .            # Stage all changes
 ```
 
 **Save a snapshot (commit):**
+
 ```bash
 git commit -m "Describe your changes"
 ```
 
 **View history:**
+
 ```bash
 git log --oneline
 ```
 
 **Push to remote:**
+
 ```bash
 git push
 ```
 
 **Pull from remote:**
+
 ```bash
 git pull
 ```
@@ -94,46 +116,58 @@ git pull
 Complete these tasks to verify Git is working:
 
 ### 1. Check Git is installed
+
 ```bash
 git --version
 ```
+
 **Verify**: You should see a version number like `git version 2.x.x`
 
 ### 2. Configure your identity
+
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 ```
+
 **Verify**: Run `git config --list` and confirm your name and email appear
 
 ### 3. Create a test repository
+
 ```bash
 mkdir git_test
 cd git_test
 git init
 ```
+
 **Verify**: You should see `Initialized empty Git repository`
 
 ### 4. Make your first commit
+
 ```bash
 echo "Hello Git" > README.md
 git status
 ```
+
 **Verify**: You should see `README.md` listed as an untracked file
 
 ```bash
 git add README.md
 git commit -m "Initial commit"
 ```
+
 **Verify**: You should see `1 file changed, 1 insertion(+)`
 
 ### 5. View your history
+
 ```bash
 git log --oneline
 ```
+
 **Verify**: You should see your commit with the message "Initial commit"
 
 ### 6. Clean up
+
 ```bash
 cd ..
 rm -rf git_test
