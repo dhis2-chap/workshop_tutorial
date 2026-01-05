@@ -5,7 +5,7 @@
 The terminal (also called command line or shell) is a text-based interface for interacting with your computer. Learning basic terminal skills is essential for working with Git, running scripts, and using development tools.
 
 <details>
-  <summary><strong style="font-size: 20px">Windows (installation guide)</strong></summary>
+  <summary><strong style="font-size: 24px">Windows (installation guide)</strong></summary>
 
 To use Chap CLI later on a Windows machine, install the Windows Subsystem for Linux (WSL).
 
@@ -15,20 +15,25 @@ Windows Subsystem for Linux (WSL) allows you to run a Linux environment on your 
    <img src="image.png" alt="PowerShell Start Menu" width="400" />
 
 2. Within the shell, execute:
+
    ```bash
    wsl --install
    ```
 
+3. Restart your computer
+
+4. Search for and open “Ubuntu” from the Start menu. You now have access to Ubuntu command line, which is a Linux distribution, allowing you to execute Linux commands.
+
 </details>
 
 <details>
-  <summary><strong style="font-size: 20px">Mac / Linux (installation guide)</strong></summary>
+  <summary><strong style="font-size: 24px">Mac / Linux (installation guide)</strong></summary>
 
 Open the <strong>Terminal</strong> application.
 
 On macOS, you can find it in
 <strong>Applications → Utilities → Terminal</strong>,
-or search for “Terminal” using Spotlight.
+or search for “Terminal” using Spotlight (CMD + Space).
 
 </details>
 
