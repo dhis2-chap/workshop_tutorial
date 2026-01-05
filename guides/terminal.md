@@ -88,7 +88,7 @@ Open your terminal, and you should be good to go to continue to the next section
 
 ## IDE (Integrated Development Environment)
 
-Use an IDE — recommended: Visual Studio Code (https://code.visualstudio.com/). It gives an editor and integrated terminal. After installing, open your project folder (File → Open Folder) or run:
+We recommend you use an IDE, or at least a text editor, such as Notepad or VIM, to edit and navigate between files. We recommend you install Visual Studio Code (https://code.visualstudio.com/). After installing, you can open your project folder in Visual Studio Code from **File → Open Folder**, or run the following command in your terminal.
 
 ```bash
 code .
