@@ -11,7 +11,7 @@ The terminal is essential for:
 
 ## What is the Terminal?
 
-The terminal (also called the command line, shell, or CLI) is a text-based interface for interacting with your computer. Instead of clicking icons, you type commands, such as `ls`, which list items in your current directory.
+The terminal (also called the command line, shell, or CLI) is a text-based interface for interacting with your computer. Instead of using a graphical interface, such as File Explorer or Finder, you type commands, such as ls, which list items in your current directory.
 
 - **Shell**: The program that interprets your commands (e.g., bash, zsh, PowerShell)
 - **Terminal**: The window where you type commands
@@ -22,7 +22,7 @@ The terminal (also called the command line, shell, or CLI) is a text-based inter
 <details>
   <summary><strong style="font-size: 24px">Windows</strong></summary>
 
-To use Chap CLI on a Windows machine, you need to install the Windows Subsystem for Linux (WSL) and install Chap there. WSL allows you to run a Linux environment on your Windows machine without the need for a separate virtual machine or dual booting. Read more about WSL [here](https://learn.microsoft.com/en-us/windows/wsl/about).
+To use Chap on a Windows machine, you need to install the Windows Subsystem for Linux (WSL). WSL allows you to run a Linux environment on your Windows machine without the need for a separate virtual machine or dual booting. Read more about WSL [here](https://learn.microsoft.com/en-us/windows/wsl/about).
 
 The reason Windows users need to use WSL is that Chap has dependencies on software that is hard to install correctly on a Windows machine; therefore, we use WSL to make the installation process simpler and more reliable.
 
@@ -36,7 +36,7 @@ The reason Windows users need to use WSL is that Chap has dependencies on softwa
    wsl --install
    ```
 
-3. After the installation is finished, restart your computer
+3. After the installation is finished, close PowerShell and restart your computer
 
 4. Reopen PowerShell and you can start WSL by executing `wsl` in PowerShell. This will start WSL and bring you to a linux command line interface, where you could execute Linux commands.
 
@@ -115,7 +115,7 @@ Complete these tasks to verify your terminal is working:
 ### 1. Open your terminal
 
 - **macOS/Linux**: Open Terminal
-- **Windows**: Open Ubuntu (WSL)
+- **Windows**: Open WSL
 
 ### 2. Check your location
 
