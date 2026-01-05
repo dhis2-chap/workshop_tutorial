@@ -154,6 +154,9 @@ ls
 
 ### 6. Clean up
 
+> **⚠️ Warning:**
+> The command `rm -r terminal_test` will **permanently delete** the `terminal_test` folder and everything inside it, **without asking for confirmation**. Be very careful when using `rm -r`—double-check the folder name to avoid deleting important files or directories.
+
 ```bash
 cd ..
 rm -r terminal_test
