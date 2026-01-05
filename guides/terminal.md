@@ -88,11 +88,20 @@ Open your terminal, and you should be good to go to continue to the next section
 
 ## IDE (Integrated Development Environment)
 
-We recommend you use an IDE, or at least a text editor, such as Notepad or VIM, to edit and navigate between files. We recommend you install Visual Studio Code (https://code.visualstudio.com/). After installing, you can open your project folder in Visual Studio Code from **File → Open Folder**, or run the following command in your terminal.
+We recommend you use an IDE, or at least a text editor, such as Notepad or VIM, to edit and navigate between files. We recommend you install Visual Studio Code (https://code.visualstudio.com/). If you use WSL, select installation for Windows. After installing, you can open your project folder in Visual Studio Code from **File → Open Folder**, or run the following command in your terminal.
 
 ```bash
 code .
 ```
+
+**TIP:** Visual Studio Code also comes with an integrated terminal, making it easier to see, edit, and use the terminal within one application.
+
+<details>
+<summary><strong >Visual Studio Code screenshot</strong></summary>
+
+<img src="image-4.png" alt="PowerShell Start Menu" width="700">
+
+</details>
 
 ## List of basic Commands (works on Mac, Linus and WSL)
 
