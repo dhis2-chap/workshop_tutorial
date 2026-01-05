@@ -1,6 +1,3 @@
-<!-- include tabs/tabs.html -->
-<link rel="stylesheet" href="/tabs/tabs.css">
-
 # Working on the Terminal
 
 ## Introduction
