@@ -55,7 +55,7 @@ On macOS, you can find it in
 <strong>Applications → Utilities → Terminal</strong>,
 or search for "Terminal" using Spotlight (CMD + Space).
 
-#### Installing Homebrew (macOS only)
+#### Installing Homebrew
 
 In the next lesson regarding git and github, you will need the `brew` command. Homebrew ("brew") is a package manager for macOS that makes it easy to install and manage software.
 
@@ -65,7 +65,7 @@ If you don't have Homebrew installed, install it by running:
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-### Verify Homebrew is installed
+#### Verify Homebrew is installed
 
 Run:
 
