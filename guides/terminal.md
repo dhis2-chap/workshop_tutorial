@@ -36,7 +36,8 @@ If you are a Windows user, you need to use WSL, as Chap has dependencies on soft
    wsl --install
    ```
 
-3. After the installation is finished, you can now enter WSL by typing `wsl` in the PowerShell terminal, the same terminal you used to install WSL. This will bring you to a linux command line interface, where you could execute Linux command.<br/><br/> **TIP:** If the WSL does not open, try reopening PowerShell or restarting the computer.<br/><br/> **NOTE:** To verify everything works, you could try to run `ls` to list foldes and files in your current directory. The output should look similar to the output below: <br/> <img src="image-2.png" alt="PowerShell Start Menu" width="400">
+3. After the installation is finished, you can now enter WSL by typing `wsl` in the PowerShell terminal, the same terminal you used to install WSL. This will bring you to a linux command line interface, where you could execute Linux command.<br/><br/>
+   > [!TIP] If the WSL does not open, try reopening PowerShell or restarting the computer.<br/><br/> **NOTE:** To verify everything works, you could try to run `ls` to list foldes and files in your current directory. The output should look similar to the output below: <br/> <img src="image-2.png" alt="PowerShell Start Menu" width="400">
 
 </details>
 
