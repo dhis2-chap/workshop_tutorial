@@ -3,6 +3,7 @@
 ## Why?
 
 The terminal is essential for:
+
 - Running Git commands to track and share your code
 - Installing and managing packages (Python, R, etc.)
 - Running scripts and development tools
@@ -53,6 +54,18 @@ On macOS, you can find it in
 <strong>Applications → Utilities → Terminal</strong>,
 or search for "Terminal" using Spotlight (CMD + Space).
 
+#### Installing Homebrew (macOS only)
+
+In the next lesson regarding git and github, you will need the `brew` command. Homebrew ("brew") is a package manager for macOS that makes it easy to install and manage software.
+
+If you don't have Homebrew installed, install it by running:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Once Homebrew is installed, you can use the `brew` command to install other software, such as Git or Python.
+
 </details>
 
 ### Basic Commands
@@ -82,42 +95,53 @@ or search for "Terminal" using Spotlight (CMD + Space).
 Complete these tasks to verify your terminal is working:
 
 ### 1. Open your terminal
+
 - **macOS/Linux**: Open Terminal
 - **Windows**: Open Ubuntu (WSL)
 
 ### 2. Check your location
+
 ```bash
 pwd
 ```
+
 **Verify**: You should see a path like `/home/username` or `/Users/username`
 
 ### 3. List files
+
 ```bash
 ls
 ```
+
 **Verify**: You should see files and folders in your home directory
 
 ### 4. Create a test folder
+
 ```bash
 mkdir terminal_test
 cd terminal_test
 pwd
 ```
+
 **Verify**: The path should now end with `terminal_test`
 
 ### 5. Create and view a file
+
 ```bash
 touch hello.txt
 ls
 ```
+
 **Verify**: You should see `hello.txt` listed
 
 ### 6. Clean up
+
 ```bash
 cd ..
 rm -r terminal_test
 ls
 ```
+
 **Verify**: The `terminal_test` folder should be gone
 
 If all verifications passed, you're ready for the next guide: [Git and GitHub](git-github.md)
