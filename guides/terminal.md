@@ -86,7 +86,7 @@ Open your terminal, and you should be good to go to continue to the next section
 
 </details>
 
-### Basic Commands (works on both Mac, Linus and WSL)
+### List of basic Commands (works on Mac, Linus and WSL)
 
 | Command           | Description                                  |
 | ----------------- | -------------------------------------------- |
@@ -123,7 +123,7 @@ Complete these tasks to verify your terminal is working:
 pwd
 ```
 
-**Verify**: You should see a path like `/home/username` or `/Users/username`
+**Verify**: You should see a path like `/home/[your-username]` or `/Users/[your-username]`
 
 ### 3. List files
 
