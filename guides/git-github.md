@@ -286,6 +286,14 @@ Select: **GitHub.com** → **HTTPS** → **Yes** → **Login with a web browser*
 
 **7. Clone your fork**
 
+First, navigate to where you want the repository folder to be created. For example, to put it in your home directory:
+
+```bash
+cd ~
+```
+
+Now clone your fork. This creates a new folder named `chap-python-sdk` in your current location:
+
 ```bash
 git clone https://github.com/YOUR-USERNAME/chap-python-sdk.git
 cd chap-python-sdk
@@ -303,7 +311,15 @@ git remote -v
 
 **9. Make a change**
 
-Open the README.md file in a text editor and add a line (e.g., your name or a note). Save the file.
+To find where the repository is on your computer, run:
+
+```bash
+pwd
+```
+
+This shows the full path (e.g., `/home/username/chap-python-sdk`). Open this folder in your code editor (like VS Code), or navigate to it in your file explorer.
+
+Open the `README.md` file in your editor, add a line (e.g., your name or a note), and save the file.
 
 **10. Check the status**
 
