@@ -14,7 +14,7 @@ GitHub is a website for sharing code. Git is a tool for downloading and uploadin
 GitHub is a **website for hosting and sharing code**. Think of it as Google Drive for code, but with features designed specifically for programmers.
 
 Key concepts:
-- **Repository (repo)**: A project folder containing code and files, hosted on GitHub
+- **Repository (repo)**: A project folder containing code and files, hosted on GitHub. Each repo belongs to a user account or an organization.
 - **Fork**: Your personal copy of someone else's repository — you can modify it without affecting the original
 
 ## Getting Started with GitHub
@@ -32,13 +32,14 @@ If you already have an account, just sign in.
 
 ### Browsing a Repository
 
-Once logged in, you can explore any public repository:
+You can explore any public repository without logging in:
 
-1. Go to a repository URL (e.g., `github.com/knutdrand/chap-python-sdk`)
+1. Go to a repository URL, for example: [github.com/knutdrand/chap-python-sdk](https://github.com/knutdrand/chap-python-sdk)
 2. You'll see:
    - **File list**: All the files and folders in the project
    - **README**: A description of the project (displayed at the bottom)
    - **Code button**: For downloading or cloning the code
+   - **Fork button**: For creating your own copy (top right)
 
 Click on any file to view its contents. Click on folders to navigate into them.
 
