@@ -620,6 +620,67 @@ Do you need guaranteed reproducibility across different operating systems?
 
 For most development work, start with `uv` or `renv`. Add Docker when you need to share your environment with others or deploy to a server.
 
-## Next Steps
+## Exercise
 
-With your virtual environment set up, you're ready to run CHAP models. See the model-specific documentation for next steps.
+Complete the exercise for your language of choice:
+
+### Python (uv)
+
+#### 1. Install uv
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+source $HOME/.local/bin/env
+```
+**Verify**: Run `uv --version` and see a version number
+
+#### 2. Clone a project with dependencies
+```bash
+git clone https://github.com/knutdrand/chap-python-sdk.git
+cd chap-python-sdk
+```
+
+#### 3. Install dependencies
+```bash
+uv sync
+```
+**Verify**: You should see packages being installed
+
+#### 4. Run code using the environment
+```bash
+uv run python --version
+```
+**Verify**: You see a Python version number
+
+---
+
+### R (renv)
+
+#### 1. Install renv
+In R or RStudio:
+```r
+install.packages("renv")
+```
+**Verify**: No errors appear
+
+#### 2. Clone a project with renv
+```bash
+git clone https://github.com/knutdrand/chap-r-sdk.git
+cd chap-r-sdk
+```
+
+#### 3. Restore dependencies
+Open R in the project folder:
+```r
+renv::restore()
+```
+**Verify**: Packages are installed from the lockfile
+
+#### 4. Check status
+```r
+renv::status()
+```
+**Verify**: Shows that the lockfile is in sync
+
+---
+
+If your verification steps passed, your environment is ready for running CHAP models.

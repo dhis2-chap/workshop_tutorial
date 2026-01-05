@@ -1,20 +1,33 @@
 # Pull Requests
 
-## Introduction
+## Why?
 
-A pull request (PR) is a way to propose changes from your fork back to the original repository. It allows maintainers to review your changes before merging them.
+Pull requests (PRs) enable:
+- **Code review**: Others can review your changes before they're merged
+- **Discussion**: Propose changes and get feedback
+- **Quality control**: Maintainers can ensure changes meet project standards
+- **Documentation**: PRs create a record of why changes were made
 
-## Prerequisites
+Without PRs, you'd need direct write access to modify projects, and changes would go unreviewed.
 
-Before creating a pull request, you should have:
+## What is a Pull Request?
 
-1. Forked and cloned a repository
-2. Made and committed your changes
-3. Pushed your changes to your fork
+A **pull request** is a proposal to merge changes from one branch (usually your fork) into another (usually the original repository's main branch).
 
-See [Using GitHub](github.md) for these steps.
+The workflow:
+1. You fork a repository and make changes
+2. You create a PR proposing those changes
+3. Maintainers review and discuss
+4. If approved, your changes are merged
 
-## Creating a Pull Request
+## How to Create Pull Requests
+
+### Prerequisites
+
+Before creating a pull request:
+1. Fork and clone a repository ([see GitHub guide](github.md))
+2. Make and commit your changes
+3. Push your changes to your fork
 
 ### Using the Web Interface
 
@@ -34,30 +47,20 @@ gh pr create
 # Create with title and body
 gh pr create --title "Add new feature" --body "Description of changes"
 
-# Create and open in browser
+# Open in browser to fill details
 gh pr create --web
 ```
 
-## Managing Pull Requests
-
-### Viewing Pull Requests
+### Managing Pull Requests
 
 ```bash
 # List open pull requests
 gh pr list
 
-# View a specific pull request
+# View a specific PR
 gh pr view 123
 
-# View in browser
-gh pr view 123 --web
-```
-
-### Checking Out a Pull Request
-
-To test someone else's pull request locally:
-
-```bash
+# Check out someone's PR to test locally
 gh pr checkout 123
 ```
 
@@ -66,7 +69,7 @@ gh pr checkout 123
 If you need to make changes after creating a PR:
 
 ```bash
-# Make your changes
+# Make your changes locally
 # ... edit files ...
 
 # Commit and push
@@ -75,15 +78,43 @@ git commit -m "Address review feedback"
 git push
 ```
 
-The pull request will automatically update with your new commits.
+The pull request automatically updates with your new commits.
 
-## Best Practices
+## Exercise
 
-- **Write clear titles:** Summarize what the PR does
-- **Describe your changes:** Explain why you made the changes
-- **Keep PRs focused:** One feature or fix per pull request
-- **Respond to feedback:** Address reviewer comments promptly
+Complete these tasks to practice the pull request workflow:
 
-## Next Steps
+### 1. Make a change to your fork
+If you completed the GitHub exercise, you should have a cloned fork. Make a small change:
+```bash
+cd chap-python-sdk  # or chap-r-sdk
+echo "# My notes" >> README.md
+git add README.md
+git commit -m "Add notes section to README"
+git push
+```
+**Verify**: Run `git log --oneline -1` and see your new commit
 
-After your pull request is reviewed and approved, a maintainer will merge it into the original repository.
+### 2. View your fork on GitHub
+Go to `github.com/YOUR-USERNAME/chap-python-sdk`
+
+**Verify**: You should see a banner saying "This branch is 1 commit ahead"
+
+### 3. Create a pull request (optional)
+If you want to practice the full flow:
+1. Click "Contribute" > "Open pull request"
+2. Add a title like "Test PR - please ignore"
+3. Add a description
+4. Click "Create pull request"
+
+**Verify**: You should see your PR on the original repository's Pull Requests tab
+
+> Note: You can close the PR without merging if this is just practice.
+
+### 4. (Alternative) Practice with GitHub CLI
+```bash
+gh pr create --web
+```
+**Verify**: Your browser opens to the PR creation page
+
+If you completed these steps, you understand the pull request workflow. Next guide: [Virtual Environments](virtual-environments.md)

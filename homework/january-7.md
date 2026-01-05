@@ -2,111 +2,43 @@
 
 Complete this homework **before** the January 7th webinar to practice using the terminal, Git, and GitHub.
 
-## Minimal Homework
+## Checklist
 
-Complete these steps to get the basics down:
+Work through the guides in order. Each guide has an Exercise section at the end with verification steps.
 
-### 1. Set Up Your Terminal
+### 1. Terminal Basics
+- [ ] Read [Working on the Terminal](../guides/terminal.md)
+- [ ] Complete the Terminal exercise
+- [ ] Verification: You can run `pwd`, `ls`, `mkdir`, and `cd` commands
 
-- **Windows:** Install WSL ([guide](../guides/terminal.md))
-- **macOS/Linux:** Open your terminal application
+### 2. Git Basics
+- [ ] Read [Using Git](../guides/git.md)
+- [ ] Complete the Git exercise
+- [ ] Verification: `git --version` shows a version, and you can create commits
 
-### 2. Create a GitHub Account
+### 3. GitHub Setup
+- [ ] Read [Using GitHub](../guides/github.md)
+- [ ] Complete the GitHub exercise
+- [ ] Verification: You have forked and cloned a CHAP repository
 
-1. Go to [github.com](https://github.com)
-2. Click "Sign up" and follow the steps
-3. Verify your email address
+### 4. Make a Change and Push
+- [ ] Open the cloned repository in a text editor
+- [ ] Edit the README.md file (add your name or a note)
+- [ ] Commit and push your change:
+  ```bash
+  git add README.md
+  git commit -m "Add my name to README"
+  git push
+  ```
+- [ ] Verification: Visit your fork on GitHub and see your change
 
-### 3. Fork a Model Repository
+## Optional: Extra Practice
 
-Choose either Python or R:
+If you finish early and want more practice:
 
-- **Python:** https://github.com/knutdrand/chap-python-sdk
-- **R:** https://github.com/knutdrand/chap-r-sdk
-
-To fork:
-1. Go to the repository
-2. Click the "Fork" button in the top right
-3. Select your account
-
-### 4. Clone Your Fork
-
-```bash
-# Replace YOUR-USERNAME with your GitHub username
-git clone https://github.com/YOUR-USERNAME/chap-python-sdk.git
-# or for R:
-git clone https://github.com/YOUR-USERNAME/chap-r-sdk.git
-
-cd chap-python-sdk  # or chap-r-sdk
-```
-
-### 5. Make a Small Change
-
-Open the README file and add your name or a small note:
-
-```bash
-# Open in a text editor, e.g.:
-nano README.md
-# or
-code README.md  # if you have VS Code
-```
-
-### 6. Commit and Push
-
-```bash
-git add README.md
-git commit -m "Add my name to README"
-git push
-```
-
-### 7. Verify Your Work
-
-Go to your fork on GitHub and confirm your change is visible.
-
----
-
-## Recommended (Extra Practice)
-
-If you finish the minimal homework and want more practice:
-
-### Explore Git Commands
-
-```bash
-# See the commit history
-git log --oneline
-
-# Check the status of your repository
-git status
-
-# See what changes you've made
-git diff
-```
-
-### Make More Changes
-
-1. Create a new file:
-   ```bash
-   touch notes.txt
-   echo "My first note" > notes.txt
-   ```
-
-2. Add and commit it:
-   ```bash
-   git add notes.txt
-   git commit -m "Add notes file"
-   git push
-   ```
-
-### Install the GitHub CLI
-
-Follow the [GitHub guide](../guides/github.md) to install `gh` and try:
-
-```bash
-gh auth login
-gh repo view --web
-```
-
----
+- [ ] Read [Pull Requests](../guides/pull-requests.md) and complete its exercise
+- [ ] Read [Virtual Environments](../guides/virtual-environments.md) for the January 14th webinar
+- [ ] Install the GitHub CLI (`gh`) and try `gh auth login`
 
 ## Questions?
 

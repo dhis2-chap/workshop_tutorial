@@ -1,100 +1,87 @@
 # Using Git
 
-## Introduction
+## Why?
 
-Git is a version control system that tracks changes to your files. It allows you to save snapshots of your work, collaborate with others, and revert to previous versions if needed.
+Git solves critical problems in software development:
+- **Track changes**: See what changed, when, and why
+- **Undo mistakes**: Revert to any previous version of your code
+- **Collaborate**: Multiple people can work on the same project without overwriting each other's work
+- **Backup**: Your code history is stored safely, not just the latest version
 
-## Installation
+Without version control, you end up with folders like `model_final_v2_FIXED_really_final.py`.
 
-### macOS
+## What is Git?
 
+Git is a **version control system** — software that tracks changes to your files over time.
+
+Key concepts:
+- **Repository (repo)**: A folder tracked by Git, containing your files and their history
+- **Commit**: A saved snapshot of your changes, like a checkpoint you can return to
+- **Branch**: A parallel version of your code (for experimenting without affecting the main code)
+- **Remote**: A copy of your repo on a server (e.g., GitHub) for backup and sharing
+
+## How to Use Git
+
+### Installation
+
+**macOS:**
 ```bash
-# Using Homebrew
 brew install git
-
-# Or download from https://git-scm.com/download/mac
 ```
 
-### Linux (Ubuntu/Debian)
-
+**Linux (Ubuntu/Debian) / Windows (WSL):**
 ```bash
 sudo apt update
 sudo apt install git
 ```
 
-### Windows (WSL)
+### Initial Setup
 
-```bash
-sudo apt update
-sudo apt install git
-```
-
-## Initial Setup
-
-Configure your identity (used for commits):
-
+Configure your identity (used in commits):
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 ```
 
-## Basic Concepts
+### Essential Commands
 
-- **Repository (repo):** A folder tracked by Git
-- **Commit:** A saved snapshot of your changes
-- **Branch:** A parallel version of your code
-- **Remote:** A copy of your repo on a server (e.g., GitHub)
-
-## Essential Commands
-
-### Creating and Cloning Repositories
-
+**Clone an existing repository:**
 ```bash
-# Initialize a new repository
-git init
-
-# Clone an existing repository
 git clone <url>
 ```
 
-### Making Changes
-
+**Check what's changed:**
 ```bash
-# Check status of your files
 git status
+```
 
-# Stage files for commit
-git add <file>
-git add .  # Stage all changes
+**Stage files for commit:**
+```bash
+git add <file>       # Stage one file
+git add .            # Stage all changes
+```
 
-# Commit staged changes
+**Save a snapshot (commit):**
+```bash
 git commit -m "Describe your changes"
 ```
 
-### Viewing History
-
+**View history:**
 ```bash
-# View commit history
-git log
-
-# View compact history
 git log --oneline
 ```
 
-### Working with Remotes
-
+**Push to remote:**
 ```bash
-# View remotes
-git remote -v
-
-# Push changes to remote
 git push
+```
 
-# Pull changes from remote
+**Pull from remote:**
+```bash
 git pull
 ```
 
-## Typical Workflow
+### Typical Workflow
 
 1. Make changes to your files
 2. Check what changed: `git status`
@@ -102,24 +89,54 @@ git pull
 4. Commit with a message: `git commit -m "Add new feature"`
 5. Push to remote: `git push`
 
-## Example Session
+## Exercise
+
+Complete these tasks to verify Git is working:
+
+### 1. Check Git is installed
+```bash
+git --version
+```
+**Verify**: You should see a version number like `git version 2.x.x`
+
+### 2. Configure your identity
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+```
+**Verify**: Run `git config --list` and confirm your name and email appear
+
+### 3. Create a test repository
+```bash
+mkdir git_test
+cd git_test
+git init
+```
+**Verify**: You should see `Initialized empty Git repository`
+
+### 4. Make your first commit
+```bash
+echo "Hello Git" > README.md
+git status
+```
+**Verify**: You should see `README.md` listed as an untracked file
 
 ```bash
-# Clone a repository
-git clone https://github.com/username/repo.git
-cd repo
-
-# Make a change
-echo "Hello" >> README.md
-
-# Stage and commit
 git add README.md
-git commit -m "Update README"
+git commit -m "Initial commit"
+```
+**Verify**: You should see `1 file changed, 1 insertion(+)`
 
-# Push to GitHub
-git push
+### 5. View your history
+```bash
+git log --oneline
+```
+**Verify**: You should see your commit with the message "Initial commit"
+
+### 6. Clean up
+```bash
+cd ..
+rm -rf git_test
 ```
 
-## Next Steps
-
-Learn how to work with GitHub in [Using GitHub](github.md).
+If all verifications passed, you're ready for the next guide: [Using GitHub](github.md)
