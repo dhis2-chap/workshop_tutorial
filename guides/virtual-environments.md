@@ -14,15 +14,15 @@ Virtual environments solve this by giving each project its own set of packages.
 
 ## Why These Tools?
 
-| Tool | What it isolates | When to use |
-|------|------------------|-------------|
-| **uv** | Python packages | Python projects, local development |
-| **renv** | R packages | R projects, local development |
+| Tool       | What it isolates                    | When to use                                   |
+| ---------- | ----------------------------------- | --------------------------------------------- |
+| **uv**     | Python packages                     | Python projects, local development            |
+| **renv**   | R packages                          | R projects, local development                 |
 | **Docker** | Everything (OS, language, packages) | Sharing code, deployment, cross-platform work |
 
-**uv** and **renv** isolate *packages* — your project gets its own folder of dependencies.
+**uv** and **renv** isolate _packages_ — your project gets its own folder of dependencies.
 
-**Docker** goes further — it isolates the *entire environment* including the operating system. If code runs in a Docker container on your machine, it runs identically on any other machine. CHAP uses Docker to ensure models work the same everywhere.
+**Docker** goes further — it isolates the _entire environment_ including the operating system. If code runs in a Docker container on your machine, it runs identically on any other machine. CHAP uses Docker to ensure models work the same everywhere.
 
 You need **Docker** plus **one of** uv or renv (depending on whether you use Python or R).
 
@@ -38,6 +38,7 @@ You need **Docker** plus **one of** uv or renv (depending on whether you use Pyt
 ```bash
 brew install --cask docker
 ```
+
 Then open Docker from Applications.
 
 Or download [Docker Desktop for Mac](https://www.docker.com/products/docker-desktop/) directly.
@@ -61,6 +62,7 @@ sudo systemctl start docker
 sudo systemctl enable docker
 sudo usermod -aG docker $USER
 ```
+
 Then log out and log back in.
 
 </details>
@@ -70,6 +72,7 @@ Then log out and log back in.
 ```bash
 docker --version
 ```
+
 You should see something like `Docker version 29.0.0`.
 
 ---
@@ -111,6 +114,7 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 ```bash
 uv --version
 ```
+
 You should see something like `uv 0.9.0`.
 
 ---
@@ -119,18 +123,28 @@ You should see something like `uv 0.9.0`.
 
 📖 **Official guide:** [rstudio.github.io/renv](https://rstudio.github.io/renv/)
 
+### 1. Install R and RStudio
+
+You need to have R installed to use renv. RStudio is a popular IDE for R, but is optional.
+
+- Download and install R from the [CRAN website](https://cran.r-project.org/).
+- (Optional) Download and install RStudio from the [RStudio website](https://posit.co/download/rstudio-desktop/).
+
+### 2. Install renv
+
 In R or RStudio, run:
 
 ```r
 install.packages("renv")
 ```
 
-### Verify
+### 3. Verify
 
 ```r
 library(renv)
 packageVersion("renv")
 ```
+
 You should see a version number.
 
 ---
@@ -139,27 +153,27 @@ You should see a version number.
 
 ### uv (Python)
 
-| Task | Command |
-|------|---------|
-| Install dependencies | `uv sync` |
-| Add a package | `uv add <package>` |
-| Run a script | `uv run python script.py` |
+| Task                 | Command                   |
+| -------------------- | ------------------------- |
+| Install dependencies | `uv sync`                 |
+| Add a package        | `uv add <package>`        |
+| Run a script         | `uv run python script.py` |
 
 ### renv (R)
 
-| Task | Command |
-|------|---------|
-| Restore dependencies | `renv::restore()` |
-| Save new packages | `renv::snapshot()` |
-| Check status | `renv::status()` |
+| Task                 | Command            |
+| -------------------- | ------------------ |
+| Restore dependencies | `renv::restore()`  |
+| Save new packages    | `renv::snapshot()` |
+| Check status         | `renv::status()`   |
 
 ### Docker
 
-| Task | Command |
-|------|---------|
-| Run a container | `docker run <image>` |
+| Task                  | Command                    |
+| --------------------- | -------------------------- |
+| Run a container       | `docker run <image>`       |
 | Build from Dockerfile | `docker build -t <name> .` |
-| List containers | `docker ps` |
+| List containers       | `docker ps`                |
 
 ---
 
@@ -170,6 +184,7 @@ You should see a version number.
 ```bash
 docker run hello-world
 ```
+
 ✓ You should see "Hello from Docker!" and a message explaining what happened.
 
 ### 2. Test uv (Python) or renv (R)
@@ -183,6 +198,7 @@ cd chap-python-sdk
 uv sync
 uv run python --version
 ```
+
 ✓ You should see packages installing, then a Python version number.
 
 </details>
@@ -194,11 +210,14 @@ uv run python --version
 git clone https://github.com/knutdrand/chap-r-sdk.git
 cd chap-r-sdk
 ```
+
 Then in R:
+
 ```r
 renv::restore()
 renv::status()
 ```
+
 ✓ You should see packages installing, then "No issues found."
 
 </details>
