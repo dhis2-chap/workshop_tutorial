@@ -50,6 +50,18 @@ On macOS, you can find it in
 <strong>Applications → Utilities → Terminal</strong>,
 or search for "Terminal" using Spotlight (CMD + Space).
 
+#### Installing Homebrew (macOS only)
+
+In the next lesson regarding git and github, you will need the `brew` command. Homebrew ("brew") is a package manager for macOS that makes it easy to install and manage software.
+
+If you don't have Homebrew installed, install it by running:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Once Homebrew is installed, you can use the `brew` command to install other software, such as Git or Python.
+
 </details>
 
 ### Basic Commands
@@ -127,4 +139,4 @@ ls
 
 **Verify**: The `terminal_test` folder should be gone
 
-If all verifications passed, you're ready for the next guide: [Using Git](git.md)
+If all verifications passed, you're ready for the next guide: [Git and GitHub](git-github.md)
