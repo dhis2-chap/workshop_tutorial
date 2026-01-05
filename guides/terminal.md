@@ -1,13 +1,13 @@
 # Working on the Terminal
 
-## Getting Started
+## Open terminal
 
-The terminal (also called command line or shell) is a text-based interface for interacting with your computer. Learning basic terminal skills is essential for working with Git, running scripts, and using development tools.
+The terminal (also called command line or shell) is a text-based interface for interacting with your computer. Learning basic terminal skills is essential for working with Git, running scripts, using development tools and **Chap**.
 
 <details>
-  <summary><strong style="font-size: 24px">Windows (installation guide)</strong></summary>
+  <summary><strong style="font-size: 24px">Windows</strong></summary>
 
-To use Chap CLI later on a Windows machine, install the Windows Subsystem for Linux (WSL).
+To use Chap CLI later on a Windows machine, you need to install the Windows Subsystem for Linux (WSL).
 
 Windows Subsystem for Linux (WSL) allows you to run a Linux environment on your Windows machine without the need for a separate virtual machine or dual booting. Read more about WSL [here](https://learn.microsoft.com/en-us/windows/wsl/about).
 
@@ -27,7 +27,7 @@ Windows Subsystem for Linux (WSL) allows you to run a Linux environment on your 
 </details>
 
 <details>
-  <summary><strong style="font-size: 24px">Mac / Linux (installation guide)</strong></summary>
+  <summary><strong style="font-size: 24px">Mac / Linux</strong></summary>
 
 Open the <strong>Terminal</strong> application.
 
