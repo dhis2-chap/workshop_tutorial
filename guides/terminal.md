@@ -22,22 +22,21 @@ The terminal (also called the command line, shell, or CLI) is a text-based inter
 <details>
   <summary><strong style="font-size: 24px">Windows</strong></summary>
 
-To use Chap CLI on a Windows machine, you need to install the Windows Subsystem for Linux (WSL) and install Chap there. This is because Chap has dependencies on software that is hard to install correctly on a Windows machine.
+To use Chap CLI on a Windows machine, you need to install the Windows Subsystem for Linux (WSL) and install Chap there. WSL allows you to run a Linux environment on your Windows machine without the need for a separate virtual machine or dual booting. Read more about WSL [here](https://learn.microsoft.com/en-us/windows/wsl/about).
 
-Windows Subsystem for Linux (WSL) allows you to run a Linux environment on your Windows machine without the need for a separate virtual machine or dual booting. Read more about WSL [here](https://learn.microsoft.com/en-us/windows/wsl/about).
+If you are a Windows user, you need to use WSL, as Chap has dependencies on software that is hard to install correctly on a Windows machine.
 
-1. Start **PowerShell** by searching for it in the Start Menu in Windows
-   <img src="image.png" alt="PowerShell Start Menu" width="400" />
+**How to install WSL**
+
+1. Start **PowerShell** by searching for it in the Start Menu in Windows <br/> <img src="image.png" alt="PowerShell Start Menu" width="500">
 
 2. Within the shell, execute:
 
-   ```bash
+   ```ps
    wsl --install
    ```
 
-3. Restart your computer
-
-4. Search for and open "Ubuntu" from the Start menu. You now have access to Ubuntu command line, which is a Linux distribution, allowing you to execute Linux commands.
+3. After the installation is finished, you can now enter WSL by typing `wsl` in the PowerShell terminal, the same terminal you used to install WSL. This will bring you to a linux command line interface, where you could execute Linux command.<br/><br/> **TIP:** If the WSL does not open, try reopening PowerShell or restarting the computer.<br/><br/> **VERIFY:** To verify everything works, you could try to run `ls` to list foldes and files in your current directory. The output should look similar to the output below: <br/> <img src="image-2.png" alt="PowerShell Start Menu" width="600">
 
 </details>
 
@@ -77,6 +76,7 @@ Once Homebrew is installed, you can use the `brew` command to install other soft
 | `cat <file>`      | Display file contents                        |
 | `cp <src> <dest>` | Copy a file                                  |
 | `mv <src> <dest>` | Move or rename a file                        |
+| `code .`          | Open default Code Editor                     |
 
 ### Navigation Tips
 
