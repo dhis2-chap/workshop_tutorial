@@ -174,7 +174,9 @@ docker run hello-world
 
 ### 2. Test uv (Python) or renv (R)
 
-**Python:**
+<details>
+<summary><strong>Python</strong></summary>
+
 ```bash
 git clone https://github.com/knutdrand/chap-python-sdk.git
 cd chap-python-sdk
@@ -183,7 +185,11 @@ uv run python --version
 ```
 ✓ You should see packages installing, then a Python version number.
 
-**R:**
+</details>
+
+<details>
+<summary><strong>R</strong></summary>
+
 ```bash
 git clone https://github.com/knutdrand/chap-r-sdk.git
 cd chap-r-sdk
@@ -194,5 +200,7 @@ renv::restore()
 renv::status()
 ```
 ✓ You should see packages installing, then "No issues found."
+
+</details>
 
 If these commands complete without errors, your environment is ready.
