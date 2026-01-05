@@ -5,15 +5,14 @@
 The terminal (also called command line or shell) is a text-based interface for interacting with your computer. Learning basic terminal skills is essential for working with Git, running scripts, and using development tools.
 
 <details>
-  <summary><strong>Windows</strong></summary>
+  <summary><strong style="font-size: 20px">Windows (installation guide)</strong></summary>
 
-To use Chat CLI later on a Windows machine, install the Windows Subsystem for Linux (WSL).
+To use Chap CLI later on a Windows machine, install the Windows Subsystem for Linux (WSL).
 
-Windows Subsystem for Linux (WSL) allows you to run a Linux environment on your Windows machine without the need for a separate virtual machine or dual booting.  
-Read more about WSL [here](https://learn.microsoft.com/en-us/windows/wsl/about).
+Windows Subsystem for Linux (WSL) allows you to run a Linux environment on your Windows machine without the need for a separate virtual machine or dual booting. Read more about WSL [here](https://learn.microsoft.com/en-us/windows/wsl/about).
 
 1. Start **PowerShell** by searching for it in the Start Menu in Windows  
-   ![PowerShell Start Menu](image.png)
+   <img src="image.png" alt="PowerShell Start Menu" width="400" />
 
 2. Within the shell, execute:
    ```bash
@@ -23,7 +22,7 @@ Read more about WSL [here](https://learn.microsoft.com/en-us/windows/wsl/about).
 </details>
 
 <details>
-  <summary><strong>Mac / Linux</strong></summary>
+  <summary><strong style="font-size: 20px">Mac / Linux (installation guide)</strong></summary>
 
 Open the <strong>Terminal</strong> application.
 
