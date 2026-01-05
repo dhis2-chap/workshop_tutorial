@@ -25,7 +25,7 @@ The workflow:
 ### Prerequisites
 
 Before creating a pull request:
-1. Fork and clone a repository ([see GitHub guide](github.md))
+1. Fork and clone a repository ([see Git and GitHub guide](git-github.md))
 2. Make and commit your changes
 3. Push your changes to your fork
 

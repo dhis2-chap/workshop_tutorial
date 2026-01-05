@@ -11,17 +11,12 @@ Work through the guides in order. Each guide has an Exercise section at the end 
 - [ ] Complete the Terminal exercise
 - [ ] Verification: You can run `pwd`, `ls`, `mkdir`, and `cd` commands
 
-### 2. Git Basics
-- [ ] Read [Using Git](../guides/git.md)
-- [ ] Complete the Git exercise
-- [ ] Verification: `git --version` shows a version, and you can create commits
-
-### 3. GitHub Setup
-- [ ] Read [Using GitHub](../guides/github.md)
-- [ ] Complete the GitHub exercise
+### 2. Git and GitHub
+- [ ] Read [Git and GitHub](../guides/git-github.md)
+- [ ] Complete the exercises (both GitHub and Git sections)
 - [ ] Verification: You have forked and cloned a CHAP repository
 
-### 4. Make a Change and Push
+### 3. Make a Change and Push
 - [ ] Open the cloned repository in a text editor
 - [ ] Edit the README.md file (add your name or a note)
 - [ ] Commit and push your change:

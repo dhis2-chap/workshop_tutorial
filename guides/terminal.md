@@ -120,4 +120,4 @@ ls
 ```
 **Verify**: The `terminal_test` folder should be gone
 
-If all verifications passed, you're ready for the next guide: [Using Git](git.md)
+If all verifications passed, you're ready for the next guide: [Git and GitHub](git-github.md)
