@@ -28,15 +28,15 @@ Key concepts:
 
 **macOS:**
 
-Homebrew is a package manager for macOS that makes it easy to install and manage software. The instructions below are based on Homebrew being installed.
+The instructions for setting up git on macOS are based on Homebrew ("brew") being installed. Homebrew is a package manager for macOS that simplifies installing and managing software.
 
-You can install it by running:
+You can install Homebrew by running:
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Then install Git with:
+Now you can use the `brew` command to install Git:
 
 ```bash
 brew install git
