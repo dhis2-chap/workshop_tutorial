@@ -24,24 +24,30 @@ The terminal (also called the command line, shell, or CLI) is a text-based inter
 
 To use Chap CLI on a Windows machine, you need to install the Windows Subsystem for Linux (WSL) and install Chap there. WSL allows you to run a Linux environment on your Windows machine without the need for a separate virtual machine or dual booting. Read more about WSL [here](https://learn.microsoft.com/en-us/windows/wsl/about).
 
-If you are a Windows user, you need to use WSL, as Chap has dependencies on software that is hard to install correctly on a Windows machine.
+The reason Windows users need to use WSL is that Chap has dependencies on software that is hard to install correctly on a Windows machine; therefore, we use WSL to make the installation process simpler and more reliable.
 
 **How to install WSL**
 
 1. Start **PowerShell** by searching for it in the Start Menu in Windows <br/> <img src="image.png" alt="PowerShell Start Menu" width="500">
 
-2. Within the shell, execute:
+2. Within the shell, execute the following command, and create username and password as promted.
 
    ```ps
    wsl --install
    ```
 
-3. After the installation is finished, you can now enter WSL by typing `wsl` in the PowerShell terminal, the same terminal you used to install WSL. This will bring you to a linux command line interface, where you could execute Linux command.<br/><br/> **TIP:** If the WSL does not open, try reopening PowerShell or restarting the computer.<br/><br/> **VERIFY:** To verify everything works, you could try to run `ls` to list foldes and files in your current directory. The output should look similar to the output below: <br/> <img src="image-2.png" alt="PowerShell Start Menu" width="600">
+3. After the installation is finished, restart your computer
+
+4. Reopen PowerShell and you can start WSL by executing `wsl` in PowerShell. This will start WSL and bring you to a linux command line interface, where you could execute Linux commands.
+
+5. **Verify:** To verify everything works, you can try to execute `uname` in WSL. This should print "Linux", as shown below. <br/> <img src="image-3.png" alt="PowerShell Start Menu" width="600">! <br/>
+
+#### ‼️When continuing this tutorial, ensure you always execute commands within WSL, and **not** by using PowerShell.
 
 </details>
 
 <details>
-  <summary><strong style="font-size: 24px">Mac / Linux</strong></summary>
+  <summary><strong style="font-size: 24px">Mac</strong></summary>
 
 Open the <strong>Terminal</strong> application.
 
@@ -59,11 +65,28 @@ If you don't have Homebrew installed, install it by running:
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Once Homebrew is installed, you can use the `brew` command to install other software, such as Git or Python.
+### Verify Homebrew is installed
+
+Run:
+
+```bash
+brew --version
+```
+
+Expected: prints a Homebrew version string (e.g., "Homebrew 4.x.x").
+
+Re-run `brew --version`. If still missing, install Homebrew from https://brew.sh and restart your terminal.
 
 </details>
 
-### Basic Commands
+<details>
+  <summary><strong style="font-size: 24px">Linux</strong></summary>
+
+Open your terminal, and you should be good to go to continue to the next section.
+
+</details>
+
+### Basic Commands (works on both Mac, Linus and WSL)
 
 | Command           | Description                                  |
 | ----------------- | -------------------------------------------- |
