@@ -211,3 +211,16 @@ git push
 **Verify**: Visit your fork on GitHub and you should see your change in the README
 
 If all verifications passed, you're ready for the next guide: [Pull Requests](pull-requests.md)
+
+## Learn More
+
+Want to dive deeper? Here are some helpful resources:
+
+**GitHub:**
+- [GitHub's "What is GitHub?" guide](https://docs.github.com/en/get-started/start-your-journey/about-github-and-git) — Official introduction to GitHub and how it works
+- [GitHub Skills](https://skills.github.com/) — Free interactive courses to learn GitHub
+
+**Git:**
+- [Git Cheat Sheet (GitHub)](https://education.github.com/git-cheat-sheet-education.pdf) — Quick reference for common Git commands
+- [Atlassian Git Tutorials](https://www.atlassian.com/git/tutorials) — In-depth explanations of Git concepts and commands
+- [Pro Git Book](https://git-scm.com/book/en/v2) — Free comprehensive book on Git (if you want to understand everything)
