@@ -32,7 +32,8 @@ You need **Docker** plus **one of** uv or renv (depending on whether you use Pyt
 
 📖 **Official guide:** [docs.docker.com/get-docker](https://docs.docker.com/get-docker/)
 
-### macOS
+<details>
+<summary><strong>macOS</strong></summary>
 
 ```bash
 brew install --cask docker
@@ -41,11 +42,17 @@ Then open Docker from Applications.
 
 Or download [Docker Desktop for Mac](https://www.docker.com/products/docker-desktop/) directly.
 
-### Windows
+</details>
+
+<details>
+<summary><strong>Windows</strong></summary>
 
 Download [Docker Desktop for Windows](https://www.docker.com/products/docker-desktop/), run the installer, and restart if prompted.
 
-### Linux (Ubuntu/Debian)
+</details>
+
+<details>
+<summary><strong>Linux (Ubuntu/Debian)</strong></summary>
 
 ```bash
 sudo apt-get update
@@ -55,6 +62,8 @@ sudo systemctl enable docker
 sudo usermod -aG docker $USER
 ```
 Then log out and log back in.
+
+</details>
 
 ### Verify
 
@@ -69,24 +78,33 @@ You should see something like `Docker version 29.0.0`.
 
 📖 **Official guide:** [docs.astral.sh/uv/getting-started/installation](https://docs.astral.sh/uv/getting-started/installation/)
 
-### macOS
+<details>
+<summary><strong>macOS</strong></summary>
 
 ```bash
 brew install uv
 ```
 
-### macOS / Linux / WSL (alternative)
+</details>
+
+<details>
+<summary><strong>macOS / Linux / WSL (alternative)</strong></summary>
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 source $HOME/.local/bin/env
 ```
 
-### Windows (PowerShell)
+</details>
+
+<details>
+<summary><strong>Windows (PowerShell)</strong></summary>
 
 ```powershell
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
+
+</details>
 
 ### Verify
 
