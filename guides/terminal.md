@@ -6,37 +6,57 @@ The terminal (also called command line or shell) is a text-based interface for i
 
 ## Getting Started
 
-<div class="tabs">
-  <input type="radio" name="tabs" id="tab1" checked>
-  <label for="tab1">Windows</label>
+<details>
+  <summary><strong>Windows</strong></summary>
 
-  <input type="radio" name="tabs" id="tab2">
-  <label for="tab2">Mac /Linux</label>
+  <p>
+    To use Chat CLI later on a Windows machine, install the Windows Subsystem for Linux (WSL).
+  </p>
 
-  <div id="content1" class="tab color-white" >
-To use Chap CLI later on a Windows machine, install the Windows Subsystem for Linux (WSL).<br/><br/>
+  <p>
+    Windows Subsystem for Linux (WSL) allows you to run a Linux environment on your Windows machine,
+    without the need for a separate virtual machine or dual booting.
+    Read more about WSL
+    <a href="https://learn.microsoft.com/en-us/windows/wsl/about">here</a>.
+  </p>
 
-Windows Subsystem for Linux (WSL) allows you to run a Linux environment on your Windows machine, without the need for a separate virtual machine or dual booting. Read more about WSL [here](https://learn.microsoft.com/en-us/windows/wsl/about)
-<br/>
+  <ol>
+    <li>
+      Start <strong>PowerShell</strong> by searching for it in the Start Menu in Windows<br/>
+      <img src="image.png" alt="PowerShell Start Menu" width="400" />
+    </li>
 
-1. Start “PowerShell” by searching for it in the Start Menu in Windows <img src="image.png" alt="alt text" width="400" />
+    <li>
+      Within the shell, execute:
+      <pre><code class="language-bash">wsl --install</code></pre>
+    </li>
 
-2. Within the schell, execute:
+    <li>Restart your computer.</li>
 
-```bash
-  wsl --install
-```
+    <li>
+      Search for and open <strong>Ubuntu</strong> from the Start menu.
+      You now have access to the Ubuntu command line, which is a Linux distribution,
+      allowing you to execute Linux commands.
+    </li>
 
-3. Restart your computer
-4. Search for and open “Ubuntu” from the Start menu. You now have access to Ubuntu command line, which is a Linux distribution, allowing you to execute Linux commands.
+  </ol>
 
-  </div>
+</details>
 
-  <div id="content2" class="tab color-white">
-    Open the Terminal application. On macOS, you can find it in Applications > Utilities > Terminal, or search for "Terminal" using Spotlight.
-  </div>
+<details>
+  <summary><strong>Mac / Linux</strong></summary>
 
-</div>
+  <p>
+    Open the <strong>Terminal</strong> application.
+  </p>
+
+  <p>
+    On macOS, you can find it in
+    <strong>Applications → Utilities → Terminal</strong>,
+    or search for “Terminal” using Spotlight.
+  </p>
+
+</details>
 
 ## Navigation Tips
 
