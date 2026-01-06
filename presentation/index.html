@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAP Workshop: Terminal & Git Basics</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/black.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/highlight/monokai.css">
+    <style>
+        .reveal pre code {
+            max-height: 500px;
+            font-size: 0.9em;
+        }
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+        }
+        .reveal .small {
+            font-size: 0.7em;
+        }
+        .reveal .command-table {
+            font-size: 0.8em;
+        }
+        .reveal .command-table td:first-child {
+            font-family: monospace;
+            color: #7ee787;
+        }
+        .reveal .highlight-green {
+            color: #7ee787;
+        }
+        .reveal .highlight-blue {
+            color: #79c0ff;
+        }
+        .reveal .highlight-yellow {
+            color: #ffa657;
+        }
+        .two-columns {
+            display: flex;
+            gap: 2em;
+        }
+        .two-columns > * {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- ============================================ -->
+            <!-- SECTION: INTRO (3 min) -->
+            <!-- ============================================ -->
+
+            <section>
+                <h1>CHAP Workshop</h1>
+                <h3>Terminal & Git Basics</h3>
+                <p class="small">January 2025</p>
+                <aside class="notes">
+                    Welcome everyone. Today we'll cover the foundational skills you need to work with CHAP.
+                    The goal is to follow along - if you get stuck, don't worry, there's homework to catch up.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Today's Goals</h2>
+                <ul>
+                    <li>Navigate the terminal with confidence</li>
+                    <li>Understand Git & GitHub basics</li>
+                    <li>Clone a CHAP repository and make changes</li>
+                </ul>
+                <p class="small" style="margin-top: 2em;">Follow along if you can. Homework covers everything.</p>
+                <aside class="notes">
+                    Three main goals today. This is a follow-along session.
+                    If you get stuck at any point, just watch - the homework has step-by-step instructions for everything we cover.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Why These Skills?</h2>
+                <ul>
+                    <li><strong>Terminal</strong> - Run CHAP and manage packages</li>
+                    <li><strong>Git</strong> - Track changes, undo mistakes</li>
+                    <li><strong>GitHub</strong> - Share code, collaborate</li>
+                </ul>
+                <aside class="notes">
+                    Quick motivation: Terminal is how you'll run CHAP. Git tracks your changes so you can undo mistakes.
+                    GitHub is where we share code and collaborate.
+                </aside>
+            </section>
+
+            <!-- ============================================ -->
+            <!-- SECTION: TERMINAL (12 min) -->
+            <!-- ============================================ -->
+
+            <section>
+                <h1>Part 1: Terminal</h1>
+                <aside class="notes">
+                    Let's start with the terminal. This is the foundation for everything else.
+                </aside>
+            </section>
+
+            <section>
+                <h2>What is the Terminal?</h2>
+                <p>A text-based interface for your computer</p>
+                <div class="fragment">
+                    <p>Instead of clicking...</p>
+                    <pre><code class="bash">ls</code></pre>
+                    <p class="small">...type commands</p>
+                </div>
+                <aside class="notes">
+                    The terminal is a text interface. Instead of clicking through folders, you type commands.
+                    It might feel unfamiliar at first, but it's powerful once you get used to it.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Opening the Terminal</h2>
+                <ul>
+                    <li><strong>Mac:</strong> Applications &rarr; Utilities &rarr; Terminal</li>
+                    <li><strong>Windows:</strong> Open WSL (you should have this installed)</li>
+                    <li><strong>Linux:</strong> Terminal app</li>
+                </ul>
+                <p class="fragment" style="margin-top: 1em;">Open your terminal now!</p>
+                <aside class="notes">
+                    Let's all open our terminals.
+                    Mac users: Spotlight search for Terminal.
+                    Windows users: You should have WSL installed - search for WSL or Ubuntu in the start menu.
+                    Give people about 30 seconds to open their terminals.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Essential Commands</h2>
+                <table class="command-table">
+                    <tr><td>pwd</td><td>Where am I?</td></tr>
+                    <tr><td>ls</td><td>What's here?</td></tr>
+                    <tr><td>cd folder</td><td>Go into folder</td></tr>
+                    <tr><td>cd ..</td><td>Go up one level</td></tr>
+                    <tr><td>mkdir name</td><td>Create folder</td></tr>
+                    <tr><td>touch file</td><td>Create empty file</td></tr>
+                </table>
+                <aside class="notes">
+                    These are the six commands you'll use constantly.
+                    pwd - print working directory - tells you where you are
+                    ls - list - shows what's in the current folder
+                    cd - change directory - moves you around
+                    mkdir - make directory - creates a folder
+                    touch - creates an empty file
+                </aside>
+            </section>
+
+            <section>
+                <h2>Live Demo: pwd & ls</h2>
+                <pre><code class="bash" data-trim>
+pwd
+                </code></pre>
+                <pre class="fragment"><code class="bash" data-trim>
+ls
+                </code></pre>
+                <aside class="notes">
+                    DEMO TIME.
+                    First, run pwd. This shows your current location.
+                    You should see something like /home/username or /Users/username.
+
+                    Now run ls. This lists everything in your current folder.
+                    You might see Desktop, Documents, Downloads, etc.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Live Demo: mkdir & cd</h2>
+                <pre><code class="bash" data-trim>
+mkdir workshop_test
+                </code></pre>
+                <pre class="fragment"><code class="bash" data-trim>
+cd workshop_test
+                </code></pre>
+                <pre class="fragment"><code class="bash" data-trim>
+pwd
+                </code></pre>
+                <aside class="notes">
+                    DEMO: Create a folder called workshop_test.
+                    Then cd into it.
+                    Run pwd again - notice the path now ends with workshop_test.
+
+                    Give people a moment to catch up.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Live Demo: touch & ls</h2>
+                <pre><code class="bash" data-trim>
+touch hello.txt
+                </code></pre>
+                <pre class="fragment"><code class="bash" data-trim>
+ls
+                </code></pre>
+                <aside class="notes">
+                    DEMO: Create a file with touch.
+                    Run ls to verify it exists.
+
+                    Point out: the file is empty, but it exists. You could open it in an editor to add content.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Navigation Tips</h2>
+                <ul>
+                    <li><strong>Tab</strong> - autocomplete file/folder names</li>
+                    <li><strong>Up arrow</strong> - previous command</li>
+                    <li><strong>Ctrl+C</strong> - cancel/stop</li>
+                </ul>
+                <aside class="notes">
+                    Three tips that will save you time:
+                    Tab autocompletes names - try typing "cd work" then pressing Tab.
+                    Up arrow recalls your previous command.
+                    Ctrl+C stops whatever is running - useful if something hangs.
+                </aside>
+            </section>
+
+            <!-- ============================================ -->
+            <!-- SECTION: TERMINAL EXERCISE (8 min) -->
+            <!-- ============================================ -->
+
+            <section>
+                <h2>Follow Along: Terminal</h2>
+                <pre><code class="bash" data-trim>
+# 1. Check where you are
+pwd
+
+# 2. List contents
+ls
+
+# 3. Create and enter a folder
+mkdir terminal_test
+cd terminal_test
+pwd
+                </code></pre>
+                <p class="small">You should see a path ending in <code>terminal_test</code></p>
+                <aside class="notes">
+                    HANDS-ON TIME. Let's do this together.
+                    Walk through each command slowly.
+                    After cd terminal_test, pwd should show the path ending in terminal_test.
+
+                    Give people about 2-3 minutes. Walk around if in person, or ask for thumbs up in chat.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Follow Along: Create a File</h2>
+                <pre><code class="bash" data-trim>
+# 4. Create a file
+touch hello.txt
+
+# 5. Verify it exists
+ls
+                </code></pre>
+                <p class="small">You should see <code>hello.txt</code></p>
+                <aside class="notes">
+                    Continue the exercise. Create a file and verify it exists.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Follow Along: Clean Up</h2>
+                <pre><code class="bash" data-trim>
+# 6. Go up and remove the test folder
+cd ..
+rm -r terminal_test
+ls
+                </code></pre>
+                <p class="small">The <code>terminal_test</code> folder should be gone</p>
+                <p class="fragment highlight-yellow">Warning: rm -r permanently deletes!</p>
+                <aside class="notes">
+                    Clean up time. cd .. goes up one level.
+                    rm -r removes a folder and everything inside.
+
+                    IMPORTANT: Warn them that rm -r is permanent! No trash can, no undo.
+                    Always double-check what you're deleting.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Terminal: Check</h2>
+                <p>You've learned:</p>
+                <ul>
+                    <li class="highlight-green">pwd</li>
+                    <li class="highlight-green">ls</li>
+                    <li class="highlight-green">cd, mkdir, touch</li>
+                </ul>
+                <p style="margin-top: 1em;">Stuck? The <a href="../guides/terminal.md">Terminal Guide</a> has full details.</p>
+                <aside class="notes">
+                    Quick checkpoint. If anyone got stuck, point them to the terminal guide.
+                    These commands will become second nature with practice.
+                </aside>
+            </section>
+
+            <!-- ============================================ -->
+            <!-- SECTION: GIT CONCEPTS (7 min) -->
+            <!-- ============================================ -->
+
+            <section>
+                <h1>Part 2: Git & GitHub</h1>
+                <aside class="notes">
+                    Now let's talk about Git and GitHub. This is how you'll share and collaborate on code.
+                </aside>
+            </section>
+
+            <section>
+                <h2>GitHub vs Git</h2>
+                <div class="two-columns">
+                    <div>
+                        <h3 class="highlight-blue">GitHub</h3>
+                        <p>Website for sharing code</p>
+                        <p class="small">(like Google Drive for code)</p>
+                    </div>
+                    <div>
+                        <h3 class="highlight-green">Git</h3>
+                        <p>Tool to upload/download code</p>
+                        <p class="small">(runs in your terminal)</p>
+                    </div>
+                </div>
+                <aside class="notes">
+                    Common point of confusion: GitHub is the website, Git is the command-line tool.
+                    GitHub is where code lives online. Git is how you interact with it from your computer.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Key Concepts</h2>
+                <ul>
+                    <li><strong>Repository (repo)</strong> - A project folder on GitHub</li>
+                    <li class="fragment"><strong>Fork</strong> - Your own copy of a repo on GitHub</li>
+                    <li class="fragment"><strong>Clone</strong> - Download a repo to your computer</li>
+                </ul>
+                <aside class="notes">
+                    Three key terms:
+                    Repository - a project folder, contains all the files for a project.
+                    Fork - your personal copy on GitHub. Changes you make don't affect the original.
+                    Clone - downloading a repo to your computer so you can work on it.
+                </aside>
+            </section>
+
+            <section>
+                <h2>The Workflow</h2>
+                <ol>
+                    <li><strong>Fork</strong> on GitHub (get your own copy)</li>
+                    <li><strong>Clone</strong> to your computer</li>
+                    <li><strong>Edit</strong> files locally</li>
+                    <li><strong>Commit</strong> (save a snapshot)</li>
+                    <li><strong>Push</strong> (upload to GitHub)</li>
+                </ol>
+                <aside class="notes">
+                    This is the typical workflow you'll use:
+                    Fork creates your copy on GitHub.
+                    Clone downloads it.
+                    Edit files with any editor.
+                    Commit saves a snapshot with a message.
+                    Push uploads your changes back to GitHub.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Why This Matters</h2>
+                <ul>
+                    <li><strong>Backup</strong> - Your code is safe on GitHub</li>
+                    <li><strong>History</strong> - See what changed and when</li>
+                    <li><strong>Undo</strong> - Revert to previous versions</li>
+                    <li><strong>Share</strong> - Others can see and use your code</li>
+                </ul>
+                <aside class="notes">
+                    Why bother with all this?
+                    Your code is backed up - if your laptop dies, it's still on GitHub.
+                    You have full history - see exactly what changed and when.
+                    You can undo mistakes by reverting to earlier versions.
+                    And you can share your work with collaborators.
+                </aside>
+            </section>
+
+            <!-- ============================================ -->
+            <!-- SECTION: GIT DEMO (15 min) -->
+            <!-- ============================================ -->
+
+            <section>
+                <h2>Step 1: Fork on GitHub</h2>
+                <p>Go to:</p>
+                <p><a href="https://github.com/knutdrand/chap-python-sdk">github.com/knutdrand/chap-python-sdk</a></p>
+                <ol>
+                    <li>Click <strong>"Fork"</strong> (top right)</li>
+                    <li>Select your account</li>
+                </ol>
+                <p class="fragment small">Now you have: github.com/<strong>YOUR-USERNAME</strong>/chap-python-sdk</p>
+                <aside class="notes">
+                    DEMO: Open the CHAP Python SDK repository.
+                    Show the Fork button in the top right.
+                    Click it, select your account.
+
+                    Now you have your own copy. Notice the URL changes to YOUR-USERNAME/chap-python-sdk.
+                    Give people time to do this - about 1-2 minutes.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Step 2: Clone to Your Computer</h2>
+                <pre><code class="bash" data-trim>
+# Navigate to where you want the folder
+cd ~
+
+# Clone YOUR fork (replace YOUR-USERNAME)
+git clone https://github.com/YOUR-USERNAME/chap-python-sdk.git
+
+# Enter the folder
+cd chap-python-sdk
+                </code></pre>
+                <aside class="notes">
+                    DEMO: Now clone your fork.
+                    cd ~ takes you to your home directory.
+                    Replace YOUR-USERNAME with your actual GitHub username.
+
+                    This creates a chap-python-sdk folder with all the files.
+                    cd into it.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Step 3: Check Status</h2>
+                <pre><code class="bash" data-trim>
+git status
+                </code></pre>
+                <p class="fragment small">Should say: "nothing to commit, working tree clean"</p>
+                <aside class="notes">
+                    DEMO: git status is your best friend.
+                    It tells you what's changed, what's staged, and what branch you're on.
+                    Right now it should say "nothing to commit" because we haven't changed anything yet.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Step 4: Edit a File</h2>
+                <p>Open <code>README.md</code> in any editor</p>
+                <p>Add a line, e.g.:</p>
+                <pre><code class="markdown" data-trim>
+## My Notes
+Testing git workflow!
+                </code></pre>
+                <p class="small">Save the file</p>
+                <aside class="notes">
+                    DEMO: Open README.md in VS Code or any text editor.
+                    Add a line at the bottom - anything you want.
+                    Save the file.
+
+                    If using VS Code, you can run "code ." to open the folder.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Step 5: Check Status Again</h2>
+                <pre><code class="bash" data-trim>
+git status
+                </code></pre>
+                <p class="fragment small">Now shows: <span class="highlight-yellow">README.md modified</span> (in red)</p>
+                <aside class="notes">
+                    DEMO: Run git status again.
+                    Now it shows README.md as modified, in red.
+                    Red means "changed but not staged".
+                </aside>
+            </section>
+
+            <section>
+                <h2>Step 6: Stage Changes</h2>
+                <pre><code class="bash" data-trim>
+git add README.md
+                </code></pre>
+                <pre class="fragment"><code class="bash" data-trim>
+git status
+                </code></pre>
+                <p class="fragment small">Now shows: <span class="highlight-green">README.md staged</span> (in green)</p>
+                <aside class="notes">
+                    DEMO: Stage the file with git add.
+                    This marks it for inclusion in the next commit.
+
+                    Run git status again - now it's green, meaning "staged and ready to commit".
+                </aside>
+            </section>
+
+            <section>
+                <h2>Step 7: Commit</h2>
+                <pre><code class="bash" data-trim>
+git commit -m "Add my notes to README"
+                </code></pre>
+                <p class="small">The message describes what you changed</p>
+                <aside class="notes">
+                    DEMO: Commit with a message.
+                    The -m flag lets you write the message inline.
+                    Messages should describe what you changed - this helps you later.
+
+                    This creates a snapshot, but it's still only on your computer.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Step 8: Push to GitHub</h2>
+                <pre><code class="bash" data-trim>
+git push
+                </code></pre>
+                <p class="fragment">Check GitHub - your change is there!</p>
+                <aside class="notes">
+                    DEMO: Push uploads your commit to GitHub.
+
+                    Now go to your fork on GitHub and refresh.
+                    You should see your change in the README!
+                </aside>
+            </section>
+
+            <!-- ============================================ -->
+            <!-- SECTION: GIT EXERCISE (10 min) -->
+            <!-- ============================================ -->
+
+            <section>
+                <h2>Follow Along: Git Workflow</h2>
+                <p>If you haven't yet:</p>
+                <ol>
+                    <li>Fork chap-python-sdk on GitHub</li>
+                    <li>Clone your fork</li>
+                    <li>Edit README.md</li>
+                    <li>Stage, commit, push</li>
+                </ol>
+                <aside class="notes">
+                    HANDS-ON TIME.
+                    Let's make sure everyone has done this.
+                    Walk through each step if needed.
+
+                    Give people about 5-7 minutes. This is the core skill they need.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Quick Reference</h2>
+                <pre><code class="bash" data-trim>
+# Clone
+git clone https://github.com/YOUR-USERNAME/chap-python-sdk.git
+cd chap-python-sdk
+
+# Edit README.md, then:
+git status              # See what changed
+git add README.md       # Stage changes
+git commit -m "message" # Save snapshot
+git push                # Upload to GitHub
+                </code></pre>
+                <aside class="notes">
+                    Here's the quick reference.
+                    status, add, commit, push - that's the core workflow.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Common Issues</h2>
+                <ul>
+                    <li><strong>"Permission denied"</strong> - Run <code>gh auth login</code></li>
+                    <li><strong>Wrong username in URL</strong> - Use YOUR fork URL</li>
+                    <li><strong>"Nothing to commit"</strong> - Did you save the file?</li>
+                </ul>
+                <aside class="notes">
+                    Common problems:
+                    Permission denied - you need to authenticate with gh auth login.
+                    Wrong URL - make sure you're cloning YOUR fork, not the original.
+                    Nothing to commit - make sure you saved your changes in the editor.
+                </aside>
+            </section>
+
+            <!-- ============================================ -->
+            <!-- SECTION: WRAP-UP (5 min) -->
+            <!-- ============================================ -->
+
+            <section>
+                <h1>Wrap-Up</h1>
+                <aside class="notes">
+                    Let's wrap up with what's next.
+                </aside>
+            </section>
+
+            <section>
+                <h2>What We Covered</h2>
+                <ul>
+                    <li class="highlight-green">Terminal basics: pwd, ls, cd, mkdir, touch</li>
+                    <li class="highlight-green">Git workflow: clone, status, add, commit, push</li>
+                    <li class="highlight-green">GitHub: fork, browse repositories</li>
+                </ul>
+                <aside class="notes">
+                    Quick recap of what we covered today.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Coming Next</h2>
+                <ul>
+                    <li><strong>Virtual Environments</strong> - Isolate project dependencies</li>
+                    <li><strong>Pull Requests</strong> - Contribute to shared projects</li>
+                </ul>
+                <aside class="notes">
+                    In future sessions we'll cover virtual environments (keeping projects isolated)
+                    and pull requests (how to contribute changes to shared projects).
+                </aside>
+            </section>
+
+            <section>
+                <h2>Homework</h2>
+                <p>Complete before January 7th:</p>
+                <ol>
+                    <li>Finish <a href="../guides/terminal.md">Terminal Guide</a> exercise</li>
+                    <li>Finish <a href="../guides/git-github.md">Git & GitHub Guide</a> exercise</li>
+                    <li>Verify: Your change appears on your GitHub fork</li>
+                </ol>
+                <p class="small" style="margin-top: 1em;">See <a href="../homework/january-7.md">homework/january-7.md</a> for full checklist</p>
+                <aside class="notes">
+                    Homework is in the homework folder.
+                    The guides have step-by-step instructions for everything we did today.
+                    Make sure your change shows up on GitHub - that's the verification.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Questions?</h2>
+                <p>Post questions on the Community of Practice</p>
+                <p class="small" style="margin-top: 2em;">
+                    Guides: <a href="../guides/">guides/</a><br>
+                    Homework: <a href="../homework/january-7.md">homework/january-7.md</a>
+                </p>
+                <aside class="notes">
+                    Questions now, or post on the Community of Practice.
+
+                    Thank everyone for participating. Good luck with the homework!
+                </aside>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/notes/notes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/highlight/highlight.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            plugins: [ RevealNotes, RevealHighlight ],
+            // Timing display in speaker notes
+            defaultTiming: 60
+        });
+    </script>
+</body>
+</html>
