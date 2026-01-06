@@ -30,13 +30,13 @@ The reason Windows users need to use WSL is that Chap depends on software that i
 
 1. Start **PowerShell** by searching for it in the Start Menu in Windows <br/> <img src="image.png" alt="PowerShell Start Menu" width="500">
 
-2. Within the shell, execute the following command, and create username and password as promted.
+2. Within the shell, execute the following command, and create **username** and **password** as promted.
 
    ```ps
    wsl --install
    ```
 
-3. After the installation is finished, close PowerShell and restart your computer
+3. After the installation is finished, **close PowerShell and restart your computer.**
 
 4. Reopen PowerShell and you can start WSL by executing `wsl` in PowerShell. This will start WSL and bring you to a linux command line interface, where you could execute Linux commands.
 
