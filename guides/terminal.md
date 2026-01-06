@@ -24,7 +24,7 @@ The terminal (also called the command line, shell, or CLI) is a text-based inter
 
 To use Chap on a Windows machine, you need to install the Windows Subsystem for Linux (WSL). WSL allows you to run a Linux environment on your Windows machine without the need for a separate virtual machine or dual booting. Read more about WSL [here](https://learn.microsoft.com/en-us/windows/wsl/about).
 
-The reason Windows users need to use WSL is that Chap has dependencies on software that is hard to install correctly on a Windows machine; therefore, we use WSL to make the installation process simpler and more reliable.
+The reason Windows users need to use WSL is that Chap depends on software that is difficult to install correctly on a native Windows system. Therefore, we use Windows Subsystem for Linux (WSL), a Windows feature that allows a Linux distribution to run within Windows, providing a Linux environment in which Chap and its dependencies can be installed and used reliably.
 
 **How to install WSL**
 
