@@ -9,23 +9,12 @@ Work through the guides in order. Each guide has an Exercise section at the end 
 ### 1. Terminal Basics
 - [ ] Read [Working on the Terminal](../guides/terminal.md)
 - [ ] Complete the Terminal exercise
-- [ ] Verification: You can run `pwd`, `ls`, `mkdir`, and `cd` commands
+- [ ] Verification: You can run `ls` in a terminal on your laptop and see the contents of a directory
 
 ### 2. Git and GitHub
 - [ ] Read [Git and GitHub](../guides/git-github.md)
 - [ ] Complete the exercises (both GitHub and Git sections)
-- [ ] Verification: You have forked and cloned a CHAP repository
-
-### 3. Make a Change and Push
-- [ ] Open the cloned repository in a text editor
-- [ ] Edit the README.md file (add your name or a note)
-- [ ] Commit and push your change:
-  ```bash
-  git add README.md
-  git commit -m "Add my name to README"
-  git push
-  ```
-- [ ] Verification: Visit your fork on GitHub and see your change
+- [ ] Verification: You have forked and cloned an existing public repository of choice (e.g. [minimalist-example](https://github.com/dhis2-chap/minimalist_example)) 
 
 ## Optional: Extra Practice
 
