@@ -214,6 +214,7 @@ cd chap-workshop-r
 Then in R:
 
 ```r
+renv::activate()
 renv::restore()
 renv::status()
 ```
