@@ -8,9 +8,9 @@
 - [ ] Increase terminal font size (Cmd/Ctrl + for bigger)
 - [ ] Open VS Code (or your preferred editor)
 - [ ] Log into GitHub in browser
-- [ ] Have chap-python-sdk repo page open: https://github.com/knutdrand/chap-python-sdk
+- [ ] Have chap-workshop-python repo page open: https://github.com/dhis2-chap/chap-workshop-python
 - [ ] Test `gh auth status` - ensure you're authenticated
-- [ ] Clean up home directory (delete any workshop_test or chap-python-sdk folders from previous runs)
+- [ ] Clean up home directory (delete any workshop_test or chap-workshop-python folders from previous runs)
 - [ ] Open slides: `open presentation/index.html` (or use Live Server in VS Code)
 - [ ] Press `s` to open speaker notes view
 
@@ -20,7 +20,7 @@ Run these before presenting to ensure clean state:
 
 ```bash
 cd ~
-rm -rf workshop_test terminal_test chap-python-sdk
+rm -rf workshop_test terminal_test chap-workshop-python
 gh auth status  # Should show "Logged in to github.com"
 ```
 
@@ -183,12 +183,12 @@ Original Repo (GitHub) --> Fork (Your GitHub) --> Clone (Your Computer)
 #### Slide 21: Fork on GitHub
 
 **DEMO:**
-1. Go to https://github.com/knutdrand/chap-python-sdk
+1. Go to https://github.com/dhis2-chap/chap-workshop-python
 2. Click "Fork" button (top right)
 3. Select your account
 4. Wait for fork to complete
 
-Ask: "Does everyone have their own copy now? URL should be github.com/YOUR-USERNAME/chap-python-sdk"
+Ask: "Does everyone have their own copy now? URL should be github.com/YOUR-USERNAME/chap-workshop-python"
 
 Give 2 minutes for this.
 
@@ -197,8 +197,8 @@ Give 2 minutes for this.
 **DEMO COMMANDS:**
 ```bash
 cd ~
-git clone https://github.com/YOUR-USERNAME/chap-python-sdk.git
-cd chap-python-sdk
+git clone https://github.com/YOUR-USERNAME/chap-workshop-python.git
+cd chap-workshop-python
 ls
 ```
 
@@ -302,8 +302,8 @@ gh auth login
 Select: GitHub.com → HTTPS → Yes → Login with browser
 
 **Wrong URL:**
-- Must be YOUR fork: github.com/YOUR-USERNAME/chap-python-sdk
-- Not the original: github.com/knutdrand/chap-python-sdk
+- Must be YOUR fork: github.com/YOUR-USERNAME/chap-workshop-python
+- Not the original: github.com/dhis2-chap/chap-workshop-python
 
 **Nothing to commit:**
 - Did you save the file in your editor?
