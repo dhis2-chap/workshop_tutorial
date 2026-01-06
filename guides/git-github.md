@@ -34,7 +34,7 @@ If you already have an account, just sign in.
 
 You can explore any public repository without logging in:
 
-1. Go to a repository URL, for example: [github.com/knutdrand/chap-python-sdk](https://github.com/knutdrand/chap-python-sdk)
+1. Go to a repository URL, for example: [github.com/dhis2-chap/chap-workshop-python](https://github.com/dhis2-chap/chap-workshop-python)
 2. You'll see:
    - **File list**: All the files and folders in the project
    - **README**: A description of the project (displayed at the bottom)
@@ -213,7 +213,9 @@ Go to [github.com](https://github.com) and sign up (if you haven't already).
 
 **2. Browse a repository**
 
-Go to [github.com/knutdrand/chap-python-sdk](https://github.com/knutdrand/chap-python-sdk)
+Go to [github.com/dhis2-chap/chap-workshop-python](https://github.com/dhis2-chap/chap-workshop-python)
+
+> **R users:** You can also use [github.com/dhis2-chap/chap-workshop-r](https://github.com/dhis2-chap/chap-workshop-r) instead.
 
 **Verify**: You can see the list of files and the README at the bottom
 
@@ -222,7 +224,7 @@ Go to [github.com/knutdrand/chap-python-sdk](https://github.com/knutdrand/chap-p
 1. Click "Fork" in the top right
 2. Select your account
 
-**Verify**: You now have a copy at `github.com/YOUR-USERNAME/chap-python-sdk`
+**Verify**: You now have a copy at `github.com/YOUR-USERNAME/chap-workshop-python`
 
 ### Part 2: Git (Command Line)
 
@@ -292,11 +294,11 @@ First, navigate to where you want the repository folder to be created. For examp
 cd ~
 ```
 
-Now clone your fork. This creates a new folder named `chap-python-sdk` in your current location:
+Now clone your fork. This creates a new folder named `chap-workshop-python` in your current location:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/chap-python-sdk.git
-cd chap-python-sdk
+git clone https://github.com/YOUR-USERNAME/chap-workshop-python.git
+cd chap-workshop-python
 ```
 
 **Verify**: Run `ls` and you should see the repository files
@@ -317,7 +319,7 @@ To find where the repository is on your computer, run:
 pwd
 ```
 
-This shows the full path (e.g., `/home/username/chap-python-sdk`). Open this folder in your code editor (like VS Code), or navigate to it in your file explorer.
+This shows the full path (e.g., `/home/username/chap-workshop-python`). Open this folder in your code editor (like VS Code), or navigate to it in your file explorer.
 
 Open the `README.md` file in your editor, add a line (e.g., your name or a note), and save the file.
 
