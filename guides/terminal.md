@@ -183,3 +183,7 @@ ls
 **Verify**: The `terminal_test` folder should be gone
 
 If all verifications passed, you're ready for the next guide: [Git and GitHub](git-github.md)
+
+## Extra Reading
+
+- [Linux Command Cheat Sheet](https://www.geeksforgeeks.org/linux-commands-cheat-sheet/) - A comprehensive list of useful Unix/Linux commands

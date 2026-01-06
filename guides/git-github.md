@@ -140,6 +140,7 @@ When prompted:
 3. Select **Yes** to authenticate with GitHub credentials
 4. Select **Login with a web browser** and follow the prompts
 
+
 Once authenticated, Git will use your GitHub credentials automatically.
 
 ### Cloning a Repository
