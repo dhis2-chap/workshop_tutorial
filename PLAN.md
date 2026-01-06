@@ -40,10 +40,9 @@ Person comes to January 14th webinar (with knowing a bit command line and Git) a
 
 ## Action Points (January 14th)
 
-- [ ] **Knut:** Make new minimalist tutorials from the python_sdk and r_sdk:
-  - https://github.com/knutdrand/chap-python-sdk
-  - https://github.com/knutdrand/chap-r-sdk
-  - https://github.com/knutdrand/chap_r_sdk
+- [x] **Knut:** Workshop example repositories created:
+  - https://github.com/dhis2-chap/chap-workshop-python
+  - https://github.com/dhis2-chap/chap-workshop-r
 - [ ] Go through these tutorials in early January
 - [ ] Decide on how we want to recommend people to install Python/R (this also needs tutorials, or links to tutorials)
   - For chap-core we kind of need `uv`, so that should then be the recommended approach for Python packages

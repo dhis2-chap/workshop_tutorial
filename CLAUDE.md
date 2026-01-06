@@ -31,7 +31,7 @@ When editing guides:
 - Guides are cross-platform (macOS, Linux, Windows/WSL)
 - Include practical examples with copy-pasteable commands
 - Link between related guides (e.g., terminal → git → github → pull-requests)
-- Reference the CHAP model repositories: `knutdrand/chap-python-sdk` and `knutdrand/chap-r-sdk`
+- Reference the CHAP workshop repositories: `dhis2-chap/chap-workshop-python` and `dhis2-chap/chap-workshop-r`
 - Exercise verification steps should be clear and testable
 
 ## Tool Recommendations

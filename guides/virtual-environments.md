@@ -193,8 +193,8 @@ docker run hello-world
 <summary><strong>Python</strong></summary>
 
 ```bash
-git clone https://github.com/knutdrand/chap-python-sdk.git
-cd chap-python-sdk
+git clone https://github.com/dhis2-chap/chap-workshop-python.git
+cd chap-workshop-python
 uv sync
 uv run python --version
 ```
@@ -207,8 +207,8 @@ uv run python --version
 <summary><strong>R</strong></summary>
 
 ```bash
-git clone https://github.com/knutdrand/chap-r-sdk.git
-cd chap-r-sdk
+git clone https://github.com/dhis2-chap/chap-workshop-r.git
+cd chap-workshop-r
 ```
 
 Then in R:
